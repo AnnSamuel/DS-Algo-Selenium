@@ -60,6 +60,12 @@ public class DsAlgoHome_SD {
 		navHome.chkNotLoggedInErrMsg();
 	}
 
+	@Then("It should alert the user with a message You are logged in")
+	public void it_should_alert_the_user_with_a_message_You_are_logged_in() {
+		// Write code here that turns the phrase above into concrete actions
+		navHome.chkLoggedInMsg();
+	}
+	
 	@When("The user clicks any of the {string} buttons below the data structure")
 	public void the_user_clicks_any_of_the_buttons_below_the_data_structure(String string) {
 		// Write code here that turns the phrase above into concrete actions
@@ -97,11 +103,15 @@ public class DsAlgoHome_SD {
 	   navHome.verifyRegisterPg();
 	}
 	
+	
+	
 	@Given("The user is in the Home page after logged in")
 	public void the_user_is_in_the_home_page_after_logged_in() {
 	    // Write code here that turns the phrase above into concrete actions
+		//navHome.signout();
 	    navHome.signInPg();
 	}
+	
 
 	@When("The user clicks  {string} button below the {string}")
 	public void the_user_clicks_button_below_the(String string, String string2) {

@@ -36,6 +36,8 @@ public class Home {
 	By userName = By.id("id_username");
 	By password = By.id("id_password");
 	By loginBtn = By.xpath("//*[@value = 'Login']");
+	By signOutBtn = By.linkText("Sign out");
+	By loggedInMsg = By.xpath("//div[contains(text(),'You are logged in')]");
 	By dsGetStrtedBtn = By.linkText("Get Started");
 	By selArrDrpDown = By.linkText("Arrays");
 
@@ -88,6 +90,8 @@ public class Home {
 		}
 	}
 
+	
+
 	public void chkNotLoggedInErrMsg() {
 		String actualErrMsg = "You are not logged in";
 		String expectederrMsg = driver.findElement(notLoggedInErrMsg).getText();
@@ -123,14 +127,24 @@ public class Home {
 		String expectedUrl = driver.getCurrentUrl();
 		assertEquals(expectedUrl, actualUrl);
 	}
+	
+	public void chkLoggedInMsg() {
+		String actualErrMsg = "You are logged in";
+		String expectederrMsg = driver.findElement(loggedInMsg).getText();
+		assertEquals(actualErrMsg, expectederrMsg);
+	}
 
 	public void signInPg() {
-		homepage();
+		//homepage();
 		driver.findElement(signInBtn).click();
 		driver.findElement(userName).sendKeys("dsalgoproject");
 		driver.findElement(password).sendKeys("quantumqa");
 		driver.findElement(loginBtn).click();
 
+	}
+	
+	public void signout() {
+		driver.findElement(signOutBtn).click();
 	}
 	
 	public void clkDsGetStrtedBtn() {

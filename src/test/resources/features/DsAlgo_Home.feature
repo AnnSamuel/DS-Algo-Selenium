@@ -44,45 +44,50 @@ Feature: DS Algo Portal & Home Page
     #When The user clicks the "Get Started" button
     Then I should see 6 different data structure entries in that dropdown
     
-     @tag5
-    Scenario: Home - check error msg
-    Given The user opens Home Page
-    
-    Then It should alert the user with a message "You are not logged in"
+ 
 
-    @tag6
+    @tag5
     Scenario: Home - check error msg if clicked on any button
     Given The user opens Home Page
     When The user clicks any of the "Get Started" buttons below the data structure
     Then It should alert the user with a message "You are not logged in"
     
-    @tag7
+    @tag6
     Scenario: Home - check error msg if clicked on dropdown
     Given The user opens Home Page
     When The user selects any data structures item from the drop down without Sign in.
     Then It should alert the user with a message "You are not logged in"
     
-    @tag8
+    @tag7
     Scenario: Home - navigate to Sign in page
     Given The user opens Home Page
     When The user clicks "Sign in"
     Then The user should be redirected to Sign in page
     
-    @tag9
+    @tag8
     Scenario: Home - navigate to register page
     Given The user opens Home Page
     When The user clicks Register
     Then The user should be redirected to Register form
     
+    @tag9
+    Scenario: Home - check error msg
+    Given The user opens Home Page
+    When The user is in the Home page after logged in
+    Then It should alert the user with a message You are logged in
+
+   
     @tag10
+    
     Scenario: Home - navigate to Data structures-Introduction page after signin
-    Given The user is in the Home page after logged in
+    #Given The user is in the Home page after logged in
     When The user clicks  "Get Started" button below the "Data structures-Introduction" 
     Then The user should land in "Data Structures- Introduction Page" 
     
      @tag11
+    
     Scenario: Home - navigate to Array page after signin
-    Given The user is in the Home page after logged in
+    #Given The user is in the Home page after logged in
     When The user clicks the "Getting Started" button in Array Pane or select Array item from the drop down menu
     Then The user be directed to "ARRAY" Data Structure Page
     #
