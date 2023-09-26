@@ -80,14 +80,16 @@ Feature: DS Algo Portal & Home Page
     @tag10
     
     Scenario: Home - navigate to Data structures-Introduction page after signin
-    #Given The user is in the Home page after logged in
+    Given The user opens Home Page
+    And The user is in the Home page after logged in
     When The user clicks  "Get Started" button below the "Data structures-Introduction" 
     Then The user should land in "Data Structures- Introduction Page" 
     
      @tag11
     
     Scenario: Home - navigate to Array page after signin
-    #Given The user is in the Home page after logged in
+    Given The user opens Home Page
+    And The user is in the Home page after logged in
     When The user clicks the "Getting Started" button in Array Pane or select Array item from the drop down menu
     Then The user be directed to "ARRAY" Data Structure Page
     #

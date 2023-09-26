@@ -9,11 +9,14 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Home {
-	public static WebDriver driver = new ChromeDriver();
-	String URL = "https://dsportalapp.herokuapp.com/";
+
+
+
+public class Home{
+	private WebDriver driver;
+	//String URL = "https://dsportalapp.herokuapp.com/";
 	By verifyDsAlgoPortlContent = By.xpath("//h1[text()='Preparing for the Interviews']");
 	By getStrtedBtn = By.xpath("//button[text()='Get Started']");
 
@@ -41,10 +44,15 @@ public class Home {
 	By dsGetStrtedBtn = By.linkText("Get Started");
 	By selArrDrpDown = By.linkText("Arrays");
 
-	public void dsAlgo() {
+	public Home(WebDriver driver) {
+		// TODO Auto-generated constructor stub
+		this.driver= driver;
+	}
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get(URL);
+	public void dsAlgo() {
+		
+		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		// driver.get(URL);
 	}
 
 	public void verifyDsAlgoPortl() {
@@ -59,7 +67,7 @@ public class Home {
 	}
 
 	public void homepage() {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get(UrlHome);
 	}
 

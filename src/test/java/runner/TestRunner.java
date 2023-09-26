@@ -10,13 +10,15 @@ import io.cucumber.testng.CucumberOptions;
 @RunWith(Cucumber.class)
 	@CucumberOptions(plugin = {"pretty", "html:target/Report.html"},
 	monochrome = false,
-	tags= "@tag1",
+	tags= "@graph4",
 	features= {"src/test/resources/features"},
 	glue={"stepdefinition"}
 	)
 	
 	
-	public class TestRunner  extends AbstractTestNGCucumberTests{
+	public class TestRunner 
+extends AbstractTestNGCucumberTests{
+//}
 		@Override
 		@DataProvider(parallel = false)
 		public Object[][] scenarios(){

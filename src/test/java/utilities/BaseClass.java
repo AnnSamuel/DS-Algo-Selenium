@@ -40,8 +40,9 @@ public class BaseClass {
 	public static void tearDown() throws InterruptedException {
 	        
 	    if(driver!=null) {
-	         driver.close();
-	         driver.quit();
+	        driver.close();
+	        driver.quit();
+	        driver = null; // ? is this right?
 	    }
 	        
 	} } 

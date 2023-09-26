@@ -3,17 +3,19 @@ package stepdefinition;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utilities.BaseClass;
 import utilities.LoggerLoad;
 import DsAlgo_pom.Home;
 
-public class DsAlgoHome_SD {
-	Home navHome = new Home();
+public class DsAlgoHome_SD extends BaseClass{
+	Home navHome = new Home(BaseClass.getDriver());
+	
 
 	@Given("The user opens DS Algo portal link")
 	public void the_user_opens_ds_algo_portal_link() {
 		// Write code here that turns the phrase above into concrete actions
-
-		navHome.dsAlgo();
+		BaseClass.openPage();
+		//navHome.dsAlgo();
 	}
 
 	@Then("The user should land in DS Algo portal page")
@@ -109,6 +111,7 @@ public class DsAlgoHome_SD {
 	public void the_user_is_in_the_home_page_after_logged_in() {
 	    // Write code here that turns the phrase above into concrete actions
 		//navHome.signout();
+		//navHome.clickGetStrtBtn();
 	    navHome.signInPg();
 	}
 	
