@@ -10,11 +10,12 @@ import utilities.BaseClass;
 
 public class DataStructureMain extends BaseClass {
 	
-	DataStructurePage ds= new DataStructurePage(BaseClass.getDriver());
-	
+
+	DataStructurePage ds= new DataStructurePage(driver);
 	@Given("User logged in to the home page")
 	public void user_logged_in_to_the_home_page() throws InterruptedException {
 		BaseClass.openPage();
+		ds.mainGetStarted();
 		ds.login();	
 	}
 
@@ -27,7 +28,7 @@ public class DataStructureMain extends BaseClass {
 	@Then("I verify user views the Data structure Introduction screen")
 	public void i_verify_user_views_the_data_structure_Introduction_screen() {
 		 String dsPage_expected = "Data Structures-Introduction";
-		 Assert.assertEquals(dsPage_expected, ds.dsPageTitle());    
+		 Assert.assertEquals(dsPage_expected, BaseClass.title());  
 	}
 	
 	@Then("I validate Data Structure Content")
@@ -38,7 +39,9 @@ public class DataStructureMain extends BaseClass {
 	}
 	@Then("I verify the sign out")
 	public void i_verify_the_sign_out() {
-	    ds.signOut();
+		 String signOut_expected="Sign out";
+		 Assert.assertEquals(signOut_expected,ds.signOut());
+	   
 		
 	}
 	@Then("I verify Time Complexcity section")
