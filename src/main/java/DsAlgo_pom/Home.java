@@ -15,7 +15,7 @@ import org.openqa.selenium.WebElement;
 
 
 public class Home{
-	private WebDriver driver;
+	public WebDriver driver;
 	//String URL = "https://dsportalapp.herokuapp.com/";
 	By verifyDsAlgoPortlContent = By.xpath("//h1[text()='Preparing for the Interviews']");
 	By getStrtedBtn = By.xpath("//button[text()='Get Started']");

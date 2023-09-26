@@ -8,20 +8,14 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @RunWith(Cucumber.class)
-	@CucumberOptions(plugin = {"pretty", "html:target/Report.html"},
-	monochrome = false,
-	tags= "@graph4",
-	features= {"src/test/resources/features"},
-	glue={"stepdefinition"}
-	)
-	
-	
-	public class TestRunner 
-extends AbstractTestNGCucumberTests{
+@CucumberOptions(plugin = { "pretty", "html:target/Report.html" }, monochrome = false, tags = "@graph4", features = {
+		"src/test/resources/features" }, glue = { "stepdefinition" })
+
+public class TestRunner extends AbstractTestNGCucumberTests {
 //}
-		@Override
-		@DataProvider(parallel = false)
-		public Object[][] scenarios(){
-			return super.scenarios();
-		}
+	@Override
+	@DataProvider(parallel = false)
+	public Object[][] scenarios() {
+		return super.scenarios();
 	}
+}
