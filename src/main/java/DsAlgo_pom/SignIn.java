@@ -12,6 +12,8 @@ public class SignIn {
 	By usrNameBtn = By.name("username");
 	By pswdBtn = By.name("password");
 	By valSignInErrMsg = By.className("alert");
+	By signOutBtn = By.linkText("Sign out");
+	By valSignOutErrMsg = By.className("alert");
 
 
 	WebDriver driver;
@@ -26,8 +28,9 @@ public class SignIn {
 	}
 
 	public void accessReqInpFldValMsg() {
-		WebElement username = driver.findElement(usrNameBtn);
-		String validationMessage = username.getAttribute("validationMessage");
+		//WebElement username = driver.findElement(usrNameBtn);
+		WebElement usrNameBtn = driver.switchTo().activeElement();
+		String validationMessage = usrNameBtn.getAttribute("validationMessage");
 		String actualValMsg = "Please fill out this field.";
 		assertEquals(actualValMsg, validationMessage);
 	}
@@ -45,4 +48,16 @@ public class SignIn {
 		String expctedValSignInErrMsg = "Invalid Username and Password";
 		assertEquals(actualValSignInErrMsg, expctedValSignInErrMsg);
 	} 
+	
+	public void clkSignOut()
+	{
+		driver.findElement(signOutBtn).click();
+	}
+	
+	public void valSignOutMsg()
+	{
+		String actualSignOutMsg = "Logged out successfully";
+		String expectedSignOutMsg = driver.findElement(valSignOutErrMsg).getText();
+		assertEquals(actualSignOutMsg,expectedSignOutMsg );
+	}
 }

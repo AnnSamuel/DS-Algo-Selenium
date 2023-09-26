@@ -19,6 +19,8 @@
 @tag
 Feature: SignIn
   I want to use this template for my feature file
+  
+  
 
   @signIn1
   Scenario: verify username textbox
@@ -39,8 +41,19 @@ Feature: SignIn
       
 @signIn3
 
-    Scenario: Home - check error msg
+    Scenario: Login - Happy Path
     Given The user logs into "login" page
     When The user is in the Home page after logged in
     Then It should alert the user with a message You are logged in
+    
+    @signout4
+    
+    Scenario: signout
+    
+    Given The user opens Home Page
+    And The user is in the Home page after logged in
+    When User clicks Signout
+    Then It should alert the user with a message Logged out successfully
+    
+    
     

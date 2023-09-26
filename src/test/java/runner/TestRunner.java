@@ -8,7 +8,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = { "pretty", "html:target/Report.html" }, monochrome = false, tags = "@graph4", features = {
+@CucumberOptions(plugin = { "pretty", "html:target/Report.html" }, monochrome = false, tags = "@signout4", features = {
 		"src/test/resources/features" }, glue = { "stepdefinition" })
 
 public class TestRunner extends AbstractTestNGCucumberTests {
