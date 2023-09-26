@@ -20,7 +20,6 @@ public class Graph {
 
 //try here
 	By tryHereBtn = By.linkText("Try here>>>");
-	//By inptCode = By.xpath("//div[@class='CodeMirror cm-s-default']//textarea[@autocorrect ='off']");
 	By inptCode = By.xpath("//textarea[@autocorrect ='off']");
 	By runBtn = By.xpath("//button[text()='Run']");
 	By output = By.id("output");
@@ -88,6 +87,6 @@ public class Graph {
 		String actualHeading = driver.findElement(graphRepIntro).getText();
 		String expectedHeading = "Graph Representations";
 		assertEquals(actualHeading, expectedHeading);
-	}
+	} 
 
 }

@@ -45,13 +45,6 @@ public void the_user_should_be_directed_to_graph_representations_page() {
 	dsAlgoGraph.verifyGraphRepPageHeading();
 }
 
-
-//
-//@Given("The user is in the Graph Representations page after logged in")
-//public void the_user_is_in_the_graph_representations_page_after_logged_in() {
-//    // Write code here that turns the phrase above into concrete actions
-//    
-//}
 @When("The user checks title and content")
 public void the_user_checks_title_and_content() {
     // Write code here that turns the phrase above into concrete actions

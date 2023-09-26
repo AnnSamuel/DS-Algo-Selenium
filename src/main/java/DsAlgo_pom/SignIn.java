@@ -44,5 +44,5 @@ public class SignIn {
 		String actualValSignInErrMsg = driver.findElement(valSignInErrMsg).getText();
 		String expctedValSignInErrMsg = "Invalid Username and Password";
 		assertEquals(actualValSignInErrMsg, expctedValSignInErrMsg);
-	}
+	} 
 }
