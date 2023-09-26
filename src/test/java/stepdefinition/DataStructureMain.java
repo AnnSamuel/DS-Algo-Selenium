@@ -12,7 +12,6 @@ public class DataStructureMain extends BaseClass {
 	
 
 	DataStructurePage ds= new DataStructurePage(driver);
-	
 	@Given("User logged in to the home page")
 	public void user_logged_in_to_the_home_page() throws InterruptedException {
 		BaseClass.openPage();

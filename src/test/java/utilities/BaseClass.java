@@ -10,22 +10,17 @@ public class BaseClass {
    public static WebDriver driver;
 	static String url = "https://dsportalapp.herokuapp.com/";
 
-	public static void setUpDriver() {
-	
-	       
-	    if (driver==null) {
-	           
+	public static void setUpDriver() {	       
 		    driver = new ChromeDriver();//initialize chrome driver
 		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));//implicit wait
 		    driver.manage().window().maximize();//maximize the window
-	    }
 	}
 	
 	public static void openPage() {
-	    driver.get(url);
+		driver.get(url);
 	}
 	public static void openSpecificPage(String subPage) {
-	    driver.get(url+subPage);
+		driver.get(url+subPage);
 	}
 	
 	 public static String title() {
@@ -42,7 +37,7 @@ public class BaseClass {
 	public static void acceptAlert() {
 		driver.switchTo().alert().accept();
 	}
-	public static void tearDown() {
+	public static void tearDown() throws InterruptedException {
 	        
 	    if(driver!=null) {
 	         driver.close();

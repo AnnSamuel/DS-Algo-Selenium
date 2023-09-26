@@ -11,19 +11,18 @@ public class Hooks {
 
 	@Before
     public static void setUp() {
-       BaseClass.setUpDriver();
+       BaseClass.setUpDriver();    
     }
  
     @After
-    public static void tearDown(Scenario scenario) {
+    public static void tearDown(Scenario scenario) throws InterruptedException {
     		
         //validate if scenario has failed
         if(scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) BaseClass.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName()); 
         }   
-         
-       // BaseClass.tearDown();
+        BaseClass.tearDown();
     }
     
 }
