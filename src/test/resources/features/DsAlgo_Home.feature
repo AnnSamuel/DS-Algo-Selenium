@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@home
 Feature: DS Algo Portal & Home Page
   I want to use this template for my feature file
 

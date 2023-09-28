@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@signin
 Feature: SignIn
   I want to use this template for my feature file
   

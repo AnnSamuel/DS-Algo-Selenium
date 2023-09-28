@@ -16,7 +16,7 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@graph
 Feature: Graph
 
   @graph1
@@ -39,7 +39,7 @@ Feature: Graph
     Examples: 
       | print_name      | expected_output |
       | print \\"Ann\\" | Ann             |
-      | print \\"Sam\\" | Sam             |
+      | kdjdkddkdjdkjdd | ERROR           |
 
 @graph3
   Scenario: verify graph Representations page
