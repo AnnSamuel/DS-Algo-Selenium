@@ -7,11 +7,15 @@ import utilities.BaseClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import DsAlgo_pom.ConfigReader;
+
 public class Hooks {
 
 	@Before
-    public static void setUp() {
-       BaseClass.setUpDriver();    
+    public static void setUp() throws Throwable {
+		
+		
+       BaseClass.setUpDriver(ConfigReader.getBrowserType());    
     }
  
     @After

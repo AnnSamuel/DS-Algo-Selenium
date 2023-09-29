@@ -60,6 +60,6 @@ Feature: Graph
 
     Examples: 
       | print_name      | expected_output |
-      | print \\"Ann\\" | Ann             |
+      | kdjdkddkdjdkjdd | ERROR             |
       | print \\"Sam\\" | Sam             |
 
