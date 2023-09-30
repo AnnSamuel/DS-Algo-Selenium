@@ -11,7 +11,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(plugin = { "pretty", "html:target/Report.html" }, monochrome = false, tags = "@signin", features = {
+@CucumberOptions(plugin = { "pretty", "html:target/Report.html" }, monochrome = false, tags = "@signin or @graph or @home", features = {
 		"src/test/resources/features" }, glue = { "stepdefinition" })
 
 public class TestRunner extends AbstractTestNGCucumberTests {
