@@ -65,7 +65,7 @@ public class Graph {
 
 	public void inptCode(String string) {
 		new Actions(driver).moveToElement(driver.findElement(inptCode)).click().perform();
-		//driver.findElement(inptCode).sendKeys("");
+		// driver.findElement(inptCode).sendKeys("");
 		driver.findElement(inptCode).sendKeys(string);
 	}
 
@@ -75,18 +75,26 @@ public class Graph {
 	}
 
 	public void chkOutput(String expectedoutput) {
-		String actualOutput = driver.findElement(output).getText();
-		
-		assertEquals(actualOutput, expectedoutput );
+		if (expectedoutput.equalsIgnoreCase("ERROR")) {
+			// check for alert
+			assertEquals("NameError: name 'kdjdkddkdjdkjdd' is not defined on line 1", driver.switchTo().alert().getText());
+			driver.switchTo().alert().accept();
+		} else {
+
+			String actualOutput = driver.findElement(output).getText();
+
+			assertEquals(actualOutput, expectedoutput);
+		}
 	}
-	
+
 	public void clkGraphRepLink() {
 		driver.findElement(graphRepLink).click();
 	}
+
 	public void verifyGraphRepPageHeading() {
 		String actualHeading = driver.findElement(graphRepIntro).getText();
 		String expectedHeading = "Graph Representations";
 		assertEquals(actualHeading, expectedHeading);
-	} 
+	}
 
 }
