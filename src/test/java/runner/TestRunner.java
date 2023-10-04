@@ -5,11 +5,11 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
 
 	@RunWith(Cucumber.class)
-	@CucumberOptions(features= "src/test/resources/features",
+	@CucumberOptions(features= "src/test/resources/features/DsAlogo_Register.feature",
 	plugin = {"pretty", "html:target/Report"},
 	monochrome = true,
-	tags= "@DataStructure",
-	glue={"stepdefinition"}
+	//tags= "@DataStructure",
+	glue={"Registration.java"}
 	)
 	
 	
