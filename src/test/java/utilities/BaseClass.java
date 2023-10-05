@@ -33,15 +33,21 @@ public class BaseClass {
 	public static void refresh() {
 	 driver.navigate().refresh();
 	 }
+
+	public static void back() throws InterruptedException {
+		 driver.navigate().back();
+		 Thread.sleep(3000);
+		 }
 	
 	public static void acceptAlert() {
 		driver.switchTo().alert().accept();
 	}
+	
 	public static void tearDown() throws InterruptedException {
 	        
 	    if(driver!=null) {
-	         driver.close();
-	         driver.quit();
+	        driver.close();
+	       driver.quit();
 	    }
 	        
 	} } 
