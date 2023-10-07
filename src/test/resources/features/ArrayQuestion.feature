@@ -7,6 +7,9 @@ Feature: Array
 
    @Array
    Scenario: verify user is able to perform action in array in python page
+    When User clicks on Get Started button below the Array
+    Then I verify user views array screen
+    And I validate array heading
     Given User is in the Array page 
     When User clicks on "Arrays in Python" link
     Then I validate user is in "Arrays in Python" page   

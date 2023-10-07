@@ -15,9 +15,10 @@ public class LinkedList_SD {
 	@Given("The user is in the Linked List  page after logged in")
 	public void the_user_is_in_the_linked_list_page_after_logged_in() {
 		linkelistpg = new LinkedList_Pg(BaseClass.getDriver());
-		BaseClass.openPage();
-	    linkelistpg.login();
-	    linkelistpg.clickOnLinkedList();
+//		BaseClass.openPage();
+//	    linkelistpg.login();
+//	    linkelistpg.clickOnLinkedList();
+		BaseClass.openSpecificPage("linked-list/");
 	}
 
 	@When("The user clicks  the {string} button")

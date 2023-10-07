@@ -13,10 +13,11 @@ Tree_Pg  tpg;
 @Given("The user is in the Tree  page after logged in")
 public void the_user_is_in_the_tree_page_after_logged_in() {
 	linkelistpg = new LinkedList_Pg(BaseClass.getDriver());
-	BaseClass.openPage();
-    linkelistpg.login();
-    tpg = new Tree_Pg(BaseClass.getDriver());
-    tpg.clickOnTreeGetStartedBtn();
+	BaseClass.openSpecificPage("tree/");
+//	BaseClass.openPage();
+//    linkelistpg.login();
+ //   tpg = new Tree_Pg(BaseClass.getDriver());
+//    tpg.clickOnTreeGetStartedBtn();
 }
 
 

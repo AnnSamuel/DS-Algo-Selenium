@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
-import DsAlgo_pom.ConfigReader;
+import utilities.ConfigReader;
 //import io.cucumber.junit.Cucumber;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 //@RunWith(Cucumber.class)
 @CucumberOptions(plugin = { "pretty", "html:target/Report.html" }, 
 monochrome = false, 
-tags = "@RegressionDataStructure or @signin or @home or @graph or  @linkedlist or  @queue or @stack or @tree", 
+tags = "@home or @Register or @signin or @DataStructure or @Array or @graph or  @linkedlist or  @queue or @stack or @tree", 
 features = {"src/test/resources/features" },
 glue = {"stepdefinition" })
 

@@ -14,10 +14,11 @@ public class Stack_SD {
 	@Given("The user is in the Stack page after logged in")
 	public void the_user_is_in_the_stack_page_after_logged_in() {
 		linkelistpg = new LinkedList_Pg(BaseClass.getDriver());
-		BaseClass.openPage();
-	    linkelistpg.login();
+//		BaseClass.openPage();
+//	    linkelistpg.login();
 	    stackpage = new Stack_Pg(BaseClass.getDriver());
-	    stackpage.clickOnGetStackStarted();
+		BaseClass.openSpecificPage("stack/");
+//	    stackpage.clickOnGetStackStarted();
 	    
 	}
 

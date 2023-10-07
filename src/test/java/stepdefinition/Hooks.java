@@ -7,7 +7,7 @@ import utilities.BaseClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import DsAlgo_pom.ConfigReader;
+import utilities.ConfigReader;
 
 public class Hooks {
 
