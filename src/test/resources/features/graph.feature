@@ -40,6 +40,7 @@ Feature: Graph
       | print_name      | expected_output |
       | print \\"Ann\\" | Ann             |
       | kdjdkddkdjdkjdd | ERROR           |
+     
 
 @graph3
   Scenario: verify graph Representations page

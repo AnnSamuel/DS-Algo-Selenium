@@ -26,21 +26,11 @@ Feature: DS Algo Portal & Home Page
     Then The user should land in DS Algo portal page
 
   @tag2
-  Scenario: DS Algo Portal to Home Page
+  Scenario: DS Algo Portal to Home Page & Check panes
     Given The user opens DS Algo portal link
     When The user clicks the "Get Started" button
     Then The user should be redirected to homepage
-
-  @tag3
-  Scenario: Home - Check panes
-    Given The user opens Home Page
-    #When The user clicks the "Get Started" button
-    Then The user should see 7 panes with different data structires
-
-  @tag4
-  Scenario: Home - Check drop down
-    Given The user opens Home Page
-    #When The user clicks the "Get Started" button
+    And The user should see 7 panes with different data structires
     Then I should see 6 different data structure entries in that dropdown
 
   @tag5
@@ -48,41 +38,21 @@ Feature: DS Algo Portal & Home Page
     Given The user opens Home Page
     When The user clicks any of the "Get Started" buttons below the data structure
     Then It should alert the user with a message "You are not logged in"
-
-  @tag6
-  Scenario: Home - check error msg if clicked on dropdown
-    Given The user opens Home Page
     When The user selects any data structures item from the drop down without Sign in.
     Then It should alert the user with a message "You are not logged in"
-
-  @tag7
-  Scenario: Home - navigate to Sign in page
-    Given The user opens Home Page
     When The user clicks "Sign in"
     Then The user should be redirected to Sign in page
-
-  @tag8
-  Scenario: Home - navigate to register page
-    Given The user opens Home Page
+    When User clicks on go back arrow in browser
     When The user clicks Register
     Then The user should be redirected to Register form
 
   @tag9
-  Scenario: Home - check error msg
+  Scenario: Home - You are logged in msg
     Given The user opens Home Page
     When The user is in the Home page after logged in
     Then It should alert the user with a message You are logged in
-
-  @tag10
-  Scenario: Home - navigate to Data structures-Introduction page after signin
-    Given The user opens Home Page
-    And The user is in the Home page after logged in
     When The user clicks  "Get Started" button below the "Data structures-Introduction"
     Then The user should land in "Data Structures- Introduction Page"
-
-  @tag11
-  Scenario: Home - navigate to Array page after signin
-    Given The user opens Home Page
-    And The user is in the Home page after logged in
+    When User clicks on go back arrow in browser
     When The user clicks the "Getting Started" button in Array Pane or select Array item from the drop down menu
     Then The user be directed to "ARRAY" Data Structure Page

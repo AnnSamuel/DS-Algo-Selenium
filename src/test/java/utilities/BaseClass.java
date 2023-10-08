@@ -54,6 +54,10 @@ public class BaseClass {
 	public static void acceptAlert() {
 		driver.switchTo().alert().accept();
 	}
+	
+	public static void back() throws InterruptedException {
+		 driver.navigate().back();
+		 }
 
 	public static void tearDown() throws InterruptedException {
 
