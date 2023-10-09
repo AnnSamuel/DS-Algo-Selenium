@@ -2,6 +2,7 @@ package utilities;
 
 import java.time.Duration;
 
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -51,8 +52,14 @@ public class BaseClass {
 		driver.navigate().refresh();
 	}
 
-	public static void acceptAlert() {
+	public static void acceptAlert() throws InterruptedException {
+		try {
+		Thread.sleep(1000);
 		driver.switchTo().alert().accept();
+		}
+		catch(NoAlertPresentException e) {
+		e.printStackTrace();	
+		}
 	}
 	
 	public static void back() throws InterruptedException {

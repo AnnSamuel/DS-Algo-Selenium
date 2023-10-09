@@ -1,5 +1,6 @@
 package stepdefinition;
 
+import org.openqa.selenium.NoAlertPresentException;
 import org.testng.Assert;
 import DsAlgo_pom.DataStructurePage;
 import DsAlgo_pom.DataStructure_TimePage;
@@ -55,10 +56,10 @@ public class DataStructure_Time extends BaseClass {
 		
 	}
 	@Then("I verify error message is displayed and click on ok button")
-	public void i_verify_error_message_is_displayed_and_click_on_ok_button() {
+	public void i_verify_error_message_is_displayed_and_click_on_ok_button() throws InterruptedException {
 		String expectedTitle = "NameError: name 'printed' is not defined on line 1";
 		Assert.assertEquals(expectedTitle, dst.errorMessage());
-		BaseClass.acceptAlert();
+			BaseClass.acceptAlert();
 		
 		//dst.errorMessage();
 		
