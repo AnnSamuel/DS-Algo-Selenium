@@ -29,7 +29,7 @@ Feature: SignIn
     Then It should display an error Please fill out this field below Username textbox
 
   @signIn2
-  Scenario Outline: enter invalid username or pswd
+  Scenario Outline: enter invalid "<user id>" or "<password>"
     Given The user logs into "login" page
     When The user enters an invalid "<user id>" or invalid "<password>" combination
     Then It should display an error Invalid Username and Password

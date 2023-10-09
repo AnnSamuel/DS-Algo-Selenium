@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 //@RunWith(Cucumber.class)
 @CucumberOptions(plugin = { "pretty", "html:target/Report.html" }, 
 monochrome = false, 
-tags = "@home or @Register or @signin or @DataStructure or @Array or @graph or  @linkedlist or  @queue or @stack or @tree", 
+tags = "@signin or @DataStructure or @Array or @graph or @linkedlist or @queue or @stack or @tree or @Register or @home", 
 features = {"src/test/resources/features" },
 glue = {"stepdefinition" })
 

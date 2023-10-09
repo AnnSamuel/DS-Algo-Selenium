@@ -27,7 +27,7 @@ Feature: Graph
   Then The user should be directed to Graph Page
   
   @graph2
-  Scenario Outline: verify try editor in graph page
+  Scenario Outline: verify try editor in graph page with "<print_name>" and "<expected_output>"
     Given The user opens Home Page
     And The user is in the Graph page after logged in
     And The user clicks Graph button
@@ -50,7 +50,7 @@ Feature: Graph
   Then The user should be directed to Graph Representations Page
   
   @graph4
-  Scenario Outline: verify try editor in graph page
+  Scenario Outline: verify try editor in graph pages with "<print_name>" and "<expected_output>"
     Given The user opens Home Page
     And The user is in the Graph page after logged in
     And The user clicks Graph Representations button
