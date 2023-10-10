@@ -5,7 +5,7 @@ Feature: Array
 	 Background:
 	 Given User logged in to the home page
 
-   @Array
+  # @Array
    Scenario: verify user is able to perform action in array in python page
     When User clicks on Get Started button below the Array
     Then I verify user views array screen
